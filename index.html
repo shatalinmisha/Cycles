@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycles</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="content"></div>
+
+    <script>
+        // Циклы while() и do while()
+
+        // let i = 1;
+        // while (i < 3) {
+        //     console.log('Hello while');
+        //     i++;
+        //     break;
+        // }
+
+        // let  ready = confirm('Согласин ли');
+        // while (ready === false) {
+        //     alert('Вам нужно принять условия');
+        //     ready = confirm('Согласин ли');
+        // }
+        //Тот-же код но короче.
+        // while (!confirm('Согласин ли')) {
+        //     alert('Вам нужно принять условия');
+        // }
+
+        // let pass = prompt('Введите пароль');
+        // while (pass !== 'пароль') {
+        //     alert('Не угада, давай ещё');
+        //     pass = prompt('Введите пароль');
+        // }
+
+        // let pass;
+        // let counter = 0;
+        // do {
+        //     if (counter > 1) {
+        //         if (confirm('Хотите выйти')) {
+        //             break;
+        //         }
+        //     }
+        //     pass = prompt('Введите пароль');
+        //     counter++;
+        // } while (pass !== 'пароль');
+
+        // цикл for
+
+        // for (let i = 0; i < 3; i++) {
+        //     console.log('Hello for');
+        // }
+
+        // const contentEl = document.querySelector('.content');
+        //         for (let i = 1; i <= 3; i++) {
+        //             const h2El = document.createElement('h2');
+        //             h2El.textContent = `${i} Hello for in html`;
+        //             contentEl.append(h2El);
+        //         }
+
+        // const products = ['шкаф', 'стул', 'диван'];
+
+        // for (let i = 0; i < products.length; i++) {
+        //     const element = products[i];
+        //     console.log(element);
+        // }
+
+        // const products = ['шкаф', 'стул', 'диван'];
+
+        // for (let i = 0; i < products.length; i++) {
+        //     console.log(products[i]);
+        // }
+
+
+        // const contentEl = document.querySelector('.content');
+        // const products = ['шкаф', 'стул', 'диван', 'кресло'];
+
+        // for (let i = 0; i < products.length; i++) {
+        //     const h3El = document.createElement('h3');
+        //     h3El.textContent = `Товар номер ${i + 1}`;
+
+        //     const nameProduct = document.createElement('p');
+        //     nameProduct.textContent = products[i];
+
+        //     contentEl.append(h3El);
+        //     contentEl.append(nameProduct);
+
+        // }
+
+    // цикл for in
+
+        //  const contentEl = document.querySelector('.content');
+        //  const products = ['шкаф', 'стул', 'диван'];
+
+        //  for (const key in products) {
+        //     console.log(products [key]); // перечесление значений массива
+        // console.log(key); // колличество массива [key]- ключи string формата
+        //     // console.log(typeof key); проверка типа string или number
+        //     if (key == 1) {
+        //         console.log(products [key]);
+        //     }
+        //  }
+
+// цикл for of
+
+        // for (const element of products) {
+        //     console.log(element);
+        // }
+
+        // for (const element of products) {
+        //     const h3El = document.createElement('h3');
+        //     h3El.textContent = element;
+        //     contentEl.append(h3El);
+        // }
+
+// Преобразование строк в числа.
+        
+        // const stringArray = ["1", "2", "3", "4", "5"];
+        // const numberArray = [];
+        // for (let i = 0; i < stringArray.length; i++) {
+        //     numberArray.push(Number(stringArray[i]));
+        // }
+        // console.log(numberArray);
+
+// Ищим минимальное число
+
+        // const numbers = [10, 5, 8, 1, 15];
+        // let minNumber = numbers[0];
+
+        // for (let i = 1; i < numbers.length; i++) {
+        // if (numbers[i] < minNumber) {
+        //     minNumber = numbers[i];
+        // }
+        // }
+
+        // console.log(minNumber);
+
+// Поиск по массиву:
+        // const arr = ['вода', 'сахар', 'мука', 'хлеб', 'соль'];
+        // const search = 'мука';
+ 
+        // function find(arr, search) {
+        //     let result = false;
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] === search) {
+        //             result = true;
+        //             break;
+        //         }
+        //     }
+        //     return result;
+        // }
+
+//Тот же код но короче
+        // function find(arr, search) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] === search) {
+        //            return true;
+        //         }
+        //     }
+        //     return false;
+        // }
+//Функцию поиска  можно использовать дальше в коде.
+
+        // console.log(find(arr, 'мука'));
+        // console.log(find(arr, 'соль'));
+        // console.log(find(arr, 'сухари'));
+
+//Практика поиска по DOM-элементам
+        
+        // function filter(arr, search) {
+        //     let result = -1;
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (arr[i] === search) {
+        //             result= i;
+        //             break;
+        //         }
+        //     }
+
+        //     return result;
+        // }
+
+        // const users = ['Яна', 'Наташа', 'Настя', 'Стас', 'Вика', 'Лена', 'Миша', 'Ваня', 'Катя', 'Дима'];
+       
+    //Функия создаётся для возможности , её использовать.
+    //по это причине задается параметр(arr) , 
+    // а вызывать её можно , 
+    // вкладывая в параметр любое название массива 
+    // название функции - renderList(название массива)
+
+//УНИВЕРСАЛЬНАЯ ФУНКЦИЯ.    
+        // function renderList(arr) {
+        //     const listEl = document.createElement('ul');
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     const liEl = document.createElement('li');
+        //     liEl.textContent = `${i + 1}) ${arr[i]}`;
+        //     listEl.append(liEl);
+        // }
+
+        // contentEl.append(listEl);
+        // }
+
+        // renderList(users);
+
+//ПОИСК И ПОДСВЕТИТЬ НУЖНЫЙ ЭЛЕМЕНТ
+    
+        // function find(arr, search) {
+        //         let result = -1;
+        //         for (let i = 0; i < arr.length; i++) {
+        //             if (arr[i] === search) {
+        //                 result = i + 1;
+        //                 break;
+        //             }
+        //         }
+
+        //         return result;
+        //     }
+
+        //  function renderList(arr) {
+        //         const listEl = document.createElement('ul');
+
+        //     for (let i = 0; i < arr.length; i++) {
+        //         const liEl = document.createElement('li');
+        //         liEl.textContent = `${i + 1}) ${arr[i]}`;
+        //         listEl.append(liEl);
+        //     }
+
+        //     contentEl.append(listEl);
+        //     }
+        
+        // const btnEl = document.createElement('button');
+        // btnEl.classList.add('btn');
+        // btnEl.textContent = 'Поиск';
+        // contentEl.append(btnEl);
+
+        // btnEl.onclick = function() {
+        //     const search = prompt('Укажити имя для поиска');
+
+        //     const findIndex = find(users, search);
+
+        //     if (findIndex > -1) {
+        //         document.querySelector(`li:nth-child(${findIndex})`).style.color = 'red';
+        //     } else {
+        //         alert('Имя не найдено!');
+        //     }
+        // }
+            
+        // renderList(users);
+
+// Фильтрация массива
+
+        // const arr = [19, 21, 11, 5, 18];
+        // const result = [];
+        // const minAge = 18
+
+        // for (const item of arr) {
+        //     if (item >= minAge) {
+        //         result.push(item);
+        //     }
+        // }
+        // console.log(result);
+
+// Функция для фильтрации массива
+
+        // function filter(arr, minAge) {
+        //     const result = [];
+        //     for (const item of arr) {
+        //         if (item >= minAge) {
+        //              result.push(item);
+        //         }
+        //     }
+        //     return result;
+        // }
+        // console.log(filter(arr, 18));
+        // console.log(filter(arr, 12));
+
+// фильтрации DOM-элементов
+
+        //     function filter(arr, minAge) {
+        //         const result = [];
+        //         for (const item of arr) {
+        //             if (item >= minAge) {
+        //                 result.push(item);
+        //             }
+        //         }
+        //         return result;
+        //     }
+
+            // const userAge = [19, 21, 11, 5, 18, 34, 22, 56, 76];
+            
+        
+            //     const contentEl = document.querySelector('.content');
+    
+    //  Алгаритм вывода пронумерованного списка.    
+        
+        //     function renderList(userAge) {
+        //         listEl.innerHTML = '';
+        //         for (let i = 0; i < userAge.length; i++) {
+        //             const liEl = document.createElement('li');
+        //             liEl.textContent= `${i + 1} возраст: ${userAge[i]}`;
+        //             listEl.append(liEl);
+        //         }
+        //     }   
+    // Создается кнопка
+        //     const filterBtn = document.createElement('button'); 
+        //     filterBtn.textContent = 'Фильтр';
+        //     contentEl.append(filterBtn);
+
+    // Создаем событие клика
+        //     filterBtn.onclick = function () {
+        //     // alert('Привет') 
+        //         const minAge = prompt('введите возраст.');
+
+        //         const result = filter(userAge, minAge);
+        //         renderList(result);
+        //     }
+    // Создается DOM элемент список('ul')
+        //     const listEl = document.createElement('ul');
+        //     contentEl.append(listEl);
+
+        //     renderList(userAge);
+
+// Сортировка массива
+    // Меняем местами 2 значения значения а и b.
+        // let a = 7;
+        // let b = 3;
+        // console.log(a, b);
+            
+        // if ( a > b) {
+        //         let temp = a;
+        //         a = b;
+        //         b = temp;
+        //     }
+        //     console.log(a, b);
+    
+    // Меняем местами 3 значения  a, b, c.
+        // let a = 7;
+        // let b = 3;
+        // let c = 1;
+        //     console.log(a, b, c);
+
+        //     if ( a > b) {
+        //         let temp = a;
+        //         a = b;
+        //         b = temp;
+        //     }
+
+        //     if ( b > c) {
+        //         let temp = b;
+        //         b = c;
+        //         c = temp;
+        //     }
+
+        //     if ( a > b) {
+        //         let temp = a;
+        //         a = b;
+        //         b = temp;
+        //     }
+
+        //     console.log(a, b, c); 
+
+//Сортировка методом "ПУЗЫРЬКА"
+        // const arr = [7, 3, 8, 9, 5];
+
+        // console.log(arr);
+
+        // for (let i = 0; i < arr.length; i++) {
+        //     for (let j = 0; j < arr.length - 1; j++) {
+        //         if (arr[j] > arr[j + 1]) {
+        //             let temp = arr[j];
+        //             arr[j] = arr[j + 1];
+        //             arr[j + 1] = temp;
+        //         }
+        //     }   
+        // }
+        // console.log(arr);
+
+        // function sort(arr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < arr.length - 1; j++) {
+        //             if (arr[j] > arr[j + 1]) {
+        //             let temp = arr[j];
+        //             arr[j] = arr[j + 1];
+        //             arr[j + 1] = temp;
+        //             }
+        //         }   
+        //     }
+        //     return arr;
+        // }
+        // console.log(sort(arr));
+        // console.log(sort(userAge));
+
+// Практика сортировки по DOM-элементам
+    
+        // const contentEl = document.querySelector('.content');
+        
+        // function sort(arr) {
+        //     for (let i = 0; i < arr.length; i++) {
+        //         for (let j = 0; j < arr.length - 1; j++) {
+        //             if (arr[j] > arr[j + 1]) {
+        //             let temp = arr[j];
+        //             arr[j] = arr[j + 1];
+        //             arr[j + 1] = temp;
+        //             }
+        //         }   
+        //     }
+        //     return arr;
+        // }
+
+        // const userAge = [19, 21, 11, 5, 18, 34, 22, 56, 76];
+        
+        
+
+        // function renderList (arr) {
+        //     listEl.innerHTML = '';
+        //     for (let i = 0; i < arr.length; i++) {
+        //         const liEl = document.createElement('li');
+        //         liEl.textContent = `${i + 1}) возраст: ${arr[i]}`;
+        //         listEl.append(liEl);
+        //     }
+        // }
+
+        // const sortBtn = document.createElement('button');
+        // sortBtn.textContent = 'Сортировка';
+        // contentEl.append(sortBtn);
+
+        // sortBtn.onclick = function () {
+        //     const result = sort(userAge);
+        //     renderList(result);
+        // }
+
+        // const listEl = document.createElement('ul');
+        // contentEl.append(listEl);
+
+        // renderList(userAge);
+
+    </script>
+</body>
+
+</html>
